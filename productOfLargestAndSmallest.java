@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class productOfLargestAndSmallest 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = sc.nextInt();
+		int largest=0;
+		int smallest=9;
+		int pro=1;
+		while(n>0)
+		{
+			int lastDigit=n%10;
+			if(lastDigit>largest)
+			{
+				largest=lastDigit;
+			}
+			if(lastDigit<smallest)
+			{
+				smallest=lastDigit;
+			}
+			n=n/10;
+		}
+		pro=largest*smallest;
+		System.out.println(pro);
+	}
+	}

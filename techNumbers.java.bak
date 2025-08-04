@@ -1,0 +1,53 @@
+//..2025 divide the number equal parts
+//and sum those numbers 20+24=45
+//square that number 45=2025
+//2025 is equal to starting number
+//program steps
+//count of the digits
+//if count is even
+//divide by 10 count%2 like 10 powe 1 10 powe 2
+// num/divisor
+//num%divisor
+import java.util.Scanner;
+class techNumbers 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = sc.nextInt();
+		int count=0;
+		int temp=n;
+		while(n>0)
+		{
+			count++;
+			n=n/10;
+		}
+		if(count%2==0)
+		{
+			int div=1;
+			for(int i=1; i<=count/2; i++)
+			{
+				div=div*10;
+			}
+			int firstHalf=temp/div;
+			int secondHalf=temp%div;
+			int sum=firstHalf+secondHalf;
+			int square=sum*sum;
+			if(square==sum)
+			{
+				System.out.println("it is an a tech number");
+			}
+			else
+			{
+				System.out.println("it is not an a tech number");
+			}
+			
+		}
+		else
+			{
+				System.out.println("number cannot divided in to equal parts");
+			}
+
+	}
+}
