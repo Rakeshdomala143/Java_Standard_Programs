@@ -1,0 +1,37 @@
+class nthValueAmstrongNumber 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("enter the number nth vaule 6");
+		int num=6;
+		for(int j=1; j<=1000; j++)
+		{
+			int n=j;
+			int temp=n;
+			int count=0;
+			int sum=0;
+while(n>0)
+			{
+	count++;
+	n=n/10;
+			}
+			n=temp;
+			while(n>0)
+			{
+				int lastDigit=n%10;
+				int exp=1;
+				for(int i=1; i<=count; i++)
+				{
+					exp=exp*lastDigit;
+				}
+				sum=sum+exp;
+				n=n/10;
+			}
+			if(sum==num)
+			{
+				count++;
+				System.out.println(temp);
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+//enter the number
+//extract lastdigit
+//smallest and largest
+//update the value
+//base largest,and power smallest digit
+//end..//45679
+import java.util.Scanner;
+class largestAndSmallestToItsPower 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = sc.nextInt();
+		int largest=0;
+		int smallest=9;
+		int exp=1;
+		for(; n>0;)
+		{
+			int lastDigit=n%10;//9,7,6,5,4
+			if(lastDigit>largest)//7>9,6>9
+			{
+				largest=lastDigit;//9
+			}
+			if(lastDigit<smallest)//7<9
+			{
+				smallest=lastDigit;//7,6,4                 45679/10...>>4567..>4567/10...>456..>45...>4...
+			}
+			n=n/10;
+		}
+		System.out.println(largest);
+		System.out.println(smallest);
+		for(int i=1; i<=smallest; i++)//1<=4,2<=4,3<=4,4<=4,5<=4;...while(i<=smallest)//i++
+		{
+			exp=exp*largest;
+			//1*9,2*9,9*3,9*4
+		}
+System.out.println(exp);
+
+	}
+}

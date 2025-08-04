@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class nthPalindrome 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = sc.nextInt();
+		int count=0;
+		
+		for(int i=1;  ; i++)
+		{
+			int num=i;
+			int temp=num;
+			int reverse=0;
+		
+		while(num>0)
+		{
+			int lastDigit=num%10;
+			reverse=reverse*10+lastDigit;
+			num=num/10;
+		}
+		if(reverse==temp)
+		{
+			count++;
+			if(count==n)
+			{
+			System.out.println(temp);
+			break;
+			}
+			
+		}
+		
+		}
+	}
+}

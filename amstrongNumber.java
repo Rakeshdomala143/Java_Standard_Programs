@@ -1,0 +1,47 @@
+//..153..first finding the powers
+//..powers to count the digit example=3 of 153
+// extract lastdigit
+//the last digit base power to the count digit
+//sum the values
+//update the number
+import java.util.Scanner;
+class amstrongNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = sc.nextInt();
+		int count=0;
+		int sum=0;
+		int temp=n;
+		while(n>0)
+		{
+			count++;
+			n=n/10;
+		}
+		n=temp;
+		while(n>0)
+		{
+			int lastDigit=n%10;
+			int exp=1;
+			for(int i=1; i<=count; i++)
+			{
+				exp=exp*lastDigit;
+			}
+			sum=sum+exp;
+			n=n/10;
+		}
+		if(sum==temp)
+		{
+			System.out.println("it is an a Amstrong number");
+		}
+		else
+		{
+			System.out.println("it is not an a Amstrong number");
+		}
+	}
+}
+
+	
+	

@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class factorialLargestDigit 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = sc.nextInt();
+		int largest=0;
+		int pro=1;
+		for(int i=1; i<n; i++)
+		{
+				int lastDigit=n%10;
+				if(lastDigit>largest)
+				{
+					largest=lastDigit;
+					pro=pro*lastDigit;				}
+				if(largest/i==0)
+			{
+					System.out.println(pro);
+			}
+				n=n/10;
+			}
+			System.out.println(largest);
+	}
+}
