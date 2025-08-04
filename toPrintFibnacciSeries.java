@@ -1,0 +1,25 @@
+
+class toPrintFibnacciSeries 
+{
+	public static void main(String[] args) 
+	{
+		int a=0;
+		int b=1;
+		int sum=0;
+			for(int k=1; k<=3; k++)
+			{
+				for(int j=1; j<=4; j++)
+				{
+					for(int i=0; i<=89; i++)
+		            {
+					System.out.print(sum+"\t");
+					a=b;
+					b=sum;
+					sum=a+b;
+					break;
+				}
+				}
+				System.out.println();
+		}
+	}
+}
